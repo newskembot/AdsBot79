@@ -1,0 +1,65 @@
+{
+    "name": "adsBot",
+    "description": "spam ads, ofc.",
+    "logo": "",
+    "keywords": [
+        "telegram",
+        "telethon",
+        "telegram-bot",
+        "botzhub"
+    ],
+    "repository": "https://github.com/xditya/spamAdsBot",
+    "website": "xditya.me",
+    "success_url": "https://t.me/BotzHub",
+    "env": {
+        "SESSION": {
+            "description": "A telethon session string",
+            "value": ""
+        },
+        "OWNERS": {
+            "description": "User IDs of users who'd own the bot, split by a space.",
+            "value": ""
+        },
+        "API_ID": {
+            "description": "API ID from my.telegram.org",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "API HASH from my.telegram.org",
+            "value": ""
+        },
+        "GROUP_ID": {
+            "description": "Group ID where the message has to be sent.",
+            "value": ""
+        },
+        "MESSAGES": {
+            "description": "All messages that need to be sent, split by ||",
+            "value": "Message 1 || Message 2 || ..."
+        },
+        "TIME_DELAY": {
+            "description": "Time gap in seconds between two successive messages.",
+            "value": "300"
+        },
+        "PM_MSG_1": {
+            "description": "PM Permit message, when someone PMs you.",
+            "value": "Do not DM me."
+        },
+        "PM_MSG_2": {
+            "description": "2nd PM Permit message, when someone PMs you.",
+            "value": "Hello there!"
+        },
+        "PM_MSG_3": {
+            "description": "3rd PM Permit message, when someone PMs you.",
+            "value": "Bruh?"
+        },
+        "PM_MEDIA": {
+            "description": "PM Permit media, to show along with PM Permit, when someone sends you a message.",
+            "value": "https://telegra.ph/file/4207e9d846c1549d05cc7.jpg"
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
