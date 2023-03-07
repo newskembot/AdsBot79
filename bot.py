@@ -31,9 +31,9 @@ try:
     GROUP_ID = config("GROUP_ID", cast=int)
     MSGS = config("MESSAGES")
     TIME_DELAY = config("TIME_DELAY", cast=int)
-    PM_MSG_1 = config("PM_MSG_1")
-    PM_MSG_2 = config("PM_MSG_2")
-    PM_MSG_3 = config("PM_MSG_3")
+    PM_MSG_1 = config("PM_MSG", default="‘‘Baby Live hu mai Free nude demo ke liye link par click karke video call par add ho jao 💋 jaldi karo i am waiting 👇👇\nNude Demo 👇👇\nhttps://bit.ly/3YOXFdo\nhttps://bit.ly/3YOXFdo\n\nFree video call service Join my Group 👇👇\nhttps://bit.ly/3YOXFdo\nhttps://bit.ly/3YOXFdo’’", cast=str)
+    PM_MSG_2 = config("PM_MSG_2", default=None)
+    PM_MSG_3 = config("PM_MSG_3", default=None)
     PM_MEDIA = config("PM_MEDIA", default=None)
 except Exception as e:
     log.warning("Missing config vars {}".format(e))
