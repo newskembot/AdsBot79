@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# < (c) @xditya , https://xditya.me >
-# ADsBot, 2021.
+# < (c) @Fatman_Big >
+# ADsBot, 2024.
 
 # Paid source, re-distributing without contacting the code owner is NOT allowed.
 
@@ -95,7 +95,7 @@ async def pm_msg(event):
     if event.sender_id not in PM_CACHE:
         await asyncio.sleep(random.randint(5, 10))
         await event.reply(PM_MSG_1)
-        PM_CACHE.update({event.sender_id: 1})
+        PM_CACHE[event.sender_id] = 1  # Update PM_CACHE here
     else:
         times = PM_CACHE[event.sender_id]
         if times == 1:
@@ -106,7 +106,7 @@ async def pm_msg(event):
             await asyncio.sleep(random.randint(5, 10))
             await event.reply(PM_MSG_3, file=PM_MEDIA)
             times += 1
-        PM_CACHE.update({event.sender_id: times})
+        PM_CACHE[event.sender_id] = times  # Update PM_CACHE here
 
 
 async def send_msg():
@@ -127,7 +127,7 @@ log.info(f"Starting scheduler with a {TIME_DELAY} second gap...")
 scheduler = AsyncIOScheduler()
 scheduler.add_job(send_msg, "interval", seconds=TIME_DELAY)
 scheduler.start()
-log.info("\n\nStarted.\n(c) @xditya.\n")
+log.info("\n\nStarted.\n(c) @Fatman_Big.\n")
 
 
 client.run_until_disconnected()
